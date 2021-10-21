@@ -15,10 +15,20 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => Hash::make('ad_password'),
-        ]);
+        if (!User::where('email', 'admin@admin.com')->first()) {
+            User::create([
+                'name' => 'Admin',
+                'email' => 'admin@admin.com',
+                'password' => Hash::make('ad_password'),
+            ]);
+        };
+
+        if (!User::where('email', 'admin@lmnsbilling.com')->first()) {
+            User::create([
+                'name' => 'LMNS',
+                'email' => 'admin@lmnsbilling.com',
+                'password' => Hash::make('ad_password'),
+            ]);
+        };
     }
 }
