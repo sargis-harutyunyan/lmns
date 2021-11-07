@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\HomeController as AdminController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\Pages\HomeController as HomePageController;
+use App\Http\Controllers\Admin\Pages\AboutController as AboutPageController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
@@ -48,12 +50,21 @@ Route::group(['prefix' => 'a_d_min', 'middleware' => ['auth']], function () {
     });
 
     Route::group(['prefix' => 'pages', 'as' => 'pages'], function () {
-        Route::get('/home', [PagesController::class, 'index'])->name('.home');
-        Route::get('/about', [PagesController::class, 'about'])->name('.about');
+        Route::get('/home', [HomePageController::class, 'index'])->name('.home');
 
-        Route::post('/vision', [PagesController::class, 'vision'])->name('.about.vision');
-        Route::post('/mission', [PagesController::class, 'mission'])->name('.about.mission');
-        Route::post('/team', [PagesController::class, 'team'])->name('.about.team');
+        Route::post('/top', [HomePageController::class, 'top'])->name('.home.top');
+        Route::post('/middle', [HomePageController::class, 'middle'])->name('.home.middle');
+        Route::post('/middle-1', [HomePageController::class, 'middleS1'])->name('.home.middle-1');
+        Route::post('/middle-2', [HomePageController::class, 'middleS2'])->name('.home.middle-2');
+        Route::post('/middle-3', [HomePageController::class, 'middleS3'])->name('.home.middle-3');
+        Route::post('/bottom', [HomePageController::class, 'bottom'])->name('.home.bottom');
+
+
+        Route::get('/about', [AboutPageController::class, 'about'])->name('.about');
+
+        Route::post('/vision', [AboutPageController::class, 'vision'])->name('.about.vision');
+        Route::post('/mission', [AboutPageController::class, 'mission'])->name('.about.mission');
+        Route::post('/team', [AboutPageController::class, 'team'])->name('.about.team');
 
 
         Route::get('/billing', [PagesController::class, 'store'])->name('.billing');

@@ -34,4 +34,12 @@ class Page extends Model
     const PLACE_VISION = 'vision';
     const PLACE_MISSION = 'mission';
 
+
+    const PLACE_TOP = 'top';
+    const PLACE_MIDDLE = 'middle';
+    const PLACE_MIDDLE_SECTION_1 = 'middle_section_1';
+    const PLACE_MIDDLE_SECTION_2 = 'middle_section_2';
+    const PLACE_MIDDLE_SECTION_3 = 'middle_section_3';
+    const PLACE_BOTTOM = 'bottom';
+
 }

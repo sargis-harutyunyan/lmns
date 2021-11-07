@@ -10,7 +10,33 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        $data = [];
+        $data['top'] = Page::where('name', Page::HOME)
+            ->where('place', Page::PLACE_TOP)
+            ->first()
+            ->toArray();
+        $data['middle'] = Page::where('name', Page::HOME)
+            ->where('place', Page::PLACE_MIDDLE)
+            ->first()
+            ->toArray();
+        $data['middle_1'] = Page::where('name', Page::HOME)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_1)
+            ->first()
+            ->toArray();
+        $data['middle_2'] = Page::where('name', Page::HOME)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_2)
+            ->first()
+            ->toArray();
+        $data['middle_3'] = Page::where('name', Page::HOME)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_3)
+            ->first()
+            ->toArray();
+        $data['bottom'] = Page::where('name', Page::HOME)
+            ->where('place', Page::PLACE_BOTTOM)
+            ->first()
+            ->toArray();
+
+        return view('home.index', compact('data'));
     }
 
     public function about()

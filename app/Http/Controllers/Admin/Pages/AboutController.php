@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Pages;
 
+use App\Http\Controllers\Controller;
 use App\Models\Page;
 use App\Models\Setting;
 use App\Models\Team;
@@ -9,7 +10,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class PagesController extends Controller
+class AboutController extends Controller
 {
     public function index()
     {
