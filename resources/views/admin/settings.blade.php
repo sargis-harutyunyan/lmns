@@ -89,7 +89,7 @@
                         <label for="fb">Facebook</label>
                         <input name="facebook" type="text" class="form-control @error('facebook') is-invalid @enderror" id="fb"
                                placeholder="Facebook Profile"
-                               value="{{ old('facebook', $settings->facebook) }}" required>
+                               value="{{ old('facebook', $settings->facebook) }}">
                         @error('facebook')
                             {{--<div class="alert alert-danger">{{ $message }}</div>--}}
                             <div class="invalid-feedback logo-inv">{{ $message }}</div>
@@ -100,7 +100,7 @@
                         <label for="tw">Twitter</label>
                         <input name="twitter" type="text" class="form-control @error('twitter') is-invalid @enderror" id="tw"
                                placeholder="Twitter Profile"
-                               value="{{ old('twitter', $settings->twitter) }}" required>
+                               value="{{ old('twitter', $settings->twitter) }}">
                         @error('twitter')
                             {{--<div class="alert alert-danger">{{ $message }}</div>--}}
                             <div class="invalid-feedback logo-inv">{{ $message }}</div>
@@ -111,7 +111,7 @@
                         <label for="ln">Linkedin</label>
                         <input name="linkedin" type="text" class="form-control @error('linkedin') is-invalid @enderror" id="ln"
                                placeholder="Linkedin Profile"
-                               value="{{ old('linkedin', $settings->linkedin) }}" required>
+                               value="{{ old('linkedin', $settings->linkedin) }}">
                         @error('linkedin')
                             {{--<div class="alert alert-danger">{{ $message }}</div>--}}
                             <div class="invalid-feedback logo-inv">{{ $message }}</div>

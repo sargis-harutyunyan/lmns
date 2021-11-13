@@ -25,13 +25,14 @@ class SettingsController extends Controller
         if (!$settings) {
             $settings = new Setting();
         }
+
         $request->validate([
             'email' => 'email|required',
             'phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10|required',
             'address' => 'regex:/(^[-0-9A-Za-z.,\/ ]+$)/||min:5|required',
-            'facebook' => 'url|required',
-            'twitter' => 'url|required',
-            'linkedin' => 'url|required',
+            'facebook' => 'nullable|url',
+            'twitter' => 'nullable|url',
+            'linkedin' => 'nullable|url',
         ]);
 
         foreach ($request->except('_token') as $key => $value) {
