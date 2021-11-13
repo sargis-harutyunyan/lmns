@@ -85,11 +85,23 @@ class AboutController extends Controller
 
     public function team(Request $request)
     {
-        dd($request->all());
-        Page::where('name', Page::ABOUT)
-            ->where('place', Page::PLACE_MISSION)
-            ->update(['content' => $request->get('mission')]);
+        $person = Team::find($request->get('id'));
 
+        if (!$person) {
+            return redirect()->back();
+        }
+
+        $data = $request->except('image', '_token');
+
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $new_name = uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path(Team::IMAGE_PATH), $new_name);
+
+            $data = array_merge(['image' => $new_name], $data);
+        }
+
+        $person->update($data);
 
         return redirect()->back();
     }

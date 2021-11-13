@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
+
+    const IMAGE_PATH = 'images/admin/team';
     protected $table = 'team';
 
     /**
