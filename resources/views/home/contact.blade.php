@@ -2,7 +2,7 @@
 
 @section('content')
     <div class= "contactUs_img">
-        <!-- <h1>Contact Us</h1> -->
+        <h1>Lorem ipsum dolor sit.</h1>
     </div>
 
     <div class= "contactUs_form">
@@ -24,17 +24,16 @@
                 <input type = "email" name="email" id="email" required><br>
 
                 <label for="companyName">Company Name</label><br>
-                <input type = "text" name="companyName" id="companyName">
+                <input type = "text" name="companyName" id="companyName"><br>
 
                 <label for="address">Address</label><br>
                 <input type = "text" name="address" id="address">
-
-                <input type="submit" id="submit">
             </section>
             <section>
-                <br><label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
+                <label for="message">Message</label><br>
+                <textarea name="message" id="message"></textarea><br>
+                <button id="submit">Send</button>
             </section>
         </form>
-    </div>
+    </div> 
 @endsection

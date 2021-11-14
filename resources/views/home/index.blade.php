@@ -1,14 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="section_1">
+     <div class="section_1">
         {!! $data['top']['content'] !!}
     </div>
+
     <div class="section_2">
         <section>
             {!! $data['middle']['content'] !!}
         </section>
-    </div>
+    </div> 
+     
+    
     <div class="section_3">
         <section class="section_3_1">
             {!! $data['middle_1']['content'] !!}
@@ -19,7 +22,8 @@
         <section class="section_3_3">
             {!! $data['middle_3']['content'] !!}
         </section>
-    </div>
+    </div> 
+    
     <div class="login_section">
         <section class="login_text">
             {!! $data['bottom']['content'] !!}
@@ -40,6 +44,6 @@
                     <button class="schedule">Schedule</button>
                 </form>
             </div>
-        </section>
+        </section> 
     </div>
 @endsection

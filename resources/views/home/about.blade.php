@@ -9,17 +9,18 @@
 
         <section class="members_list">
             @foreach($team as $person)
-                <div class="first_member">
+                <div>
                     <section class = "member_description">
-                        <img src ="{{ asset(BaseHelper::TEAM_IMG . $person->image) }}" width="200px">
+                        <img src ="{{ asset(BaseHelper::TEAM_IMG . $person->image) }}" width="250px">
                         <h3>{{ $person->first_name . ' ' . $person->last_name }}</h3>
                         <p>{{ $person->position }}</p>
                         <!-- <a href= "#">view bio</a> -->
                     </section>
+
                     <section class="social_network_links">
                         <a href="{{ $person->social_link }}">
-                            {{ $person->social_link }}
-                            <!-- <img  src="" alt= "fbicon"> -->
+                            <!-- {{ $person->social_link }} -->
+                            <img  src="" alt= "fbicon">
                         </a>
                     </section>
                 </div>

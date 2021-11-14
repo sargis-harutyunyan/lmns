@@ -7,7 +7,6 @@
 
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-
         <title>{{ config('app.name', 'LMNS') }}</title>
         <link rel="icon" href="{{ BaseHelper::favicon() }}">
     </head>
@@ -25,6 +24,17 @@
                 </form>
                 <a href="tel:{{ $settings->phone }}">Phone number</a>
             </section>
+            <!-- <div class= "menu">
+                <div class="show-menu">
+                    <span></span>
+                    <span></span> 
+                    <span></span>
+                </div>
+                <div class="hide-menu">
+                    <img src="{{ asset('images/x.png') }}" while="50px">
+                </div>
+
+            </div> -->
         </header>
 
         <nav class="menu_list">
@@ -46,7 +56,7 @@
 
         @yield('content')
 
-        <footer>
+         <footer>
             <section class="contact_information">
                 <a href="{{ route('home') }}">
                     <img src="{{ BaseHelper::footer() }}" width="300px">
@@ -106,6 +116,7 @@
                 </section>
             </section>
         </footer>
+        
         <div class="copyright">
             <section class="copyright_section">
                 <p>COPYRIGHT © {{ date('Y') }}</p>
@@ -114,6 +125,6 @@
                 <button class="career">Careers</button>
                 <button class="blog">Subscribe to Blog</button>
             </section>
-        </div>
+        </div> 
     </body>
 </html>
