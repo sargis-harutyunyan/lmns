@@ -18,35 +18,20 @@
                 </a>
             </section>
             <section class="form_and_tell">
-                <form class="search_form">
-                    <input type="search"  placeholder="Search...">
-                    <img src="{{ asset('images/search_icon.png') }}">
-                </form>
                 <a href="tel:{{ $settings->phone }}">Phone number</a>
             </section>
-            <!-- <div class= "menu">
-                <div class="show-menu">
-                    <span></span>
-                    <span></span> 
-                    <span></span>
-                </div>
-                <div class="hide-menu">
-                    <img src="{{ asset('images/x.png') }}" while="50px">
-                </div>
-
-            </div> -->
         </header>
 
         <nav class="menu_list">
             <ul>
-                <li class="{{ Request::route()->getName() === 'about' ? 'active' : '' }}">
-                    <a href="{{ route('about') }}">ABOUT</a>
-                </li>
-                <li class="{{ Request::route()->getName() === 'billing' ? 'active' : '' }}">
+            <li class="{{ Request::route()->getName() === 'billing' ? 'active' : '' }}">
                     <a href="{{ route('billing') }}">BILLING AND FINANCIAL</a>
                 </li>
                 <li class="{{ Request::route()->getName() === 'coding' ? 'active' : '' }}">
                     <a href="{{ route('coding') }}">CODING AND OASIS</a>
+                </li>
+                <li class="{{ Request::route()->getName() === 'about' ? 'active' : '' }}">
+                    <a href="{{ route('about') }}">ABOUT</a>
                 </li>
                 <li class="{{ Request::route()->getName() === 'contact' ? 'active' : '' }}">
                     <a href="{{ route('contact') }}">CONTACT US</a>
@@ -73,11 +58,11 @@
                             {{ $settings->phone }}
                         </a>
                     </li>
-                    <li class="address">
+                    <!-- <li class="address">
                         <a href="#">
                             {{ $settings->address }}
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </section>
             <section class="footer_nav_menu">
@@ -120,10 +105,6 @@
         <div class="copyright">
             <section class="copyright_section">
                 <p>COPYRIGHT © {{ date('Y') }}</p>
-            </section>
-            <section class="button_section">
-                <button class="career">Careers</button>
-                <button class="blog">Subscribe to Blog</button>
             </section>
         </div> 
     </body>
