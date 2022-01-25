@@ -31,6 +31,9 @@ class Page extends Model
     const HOME = 'home';
     const ABOUT = 'about';
 
+    const BILLING = 'billing';
+    const CODING = 'coding';
+
     const PLACE_VISION = 'vision';
     const PLACE_MISSION = 'mission';
 

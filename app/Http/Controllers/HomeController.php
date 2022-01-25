@@ -53,12 +53,64 @@ class HomeController extends Controller
 
     public function billing()
     {
-        return view('home.billing');
+        $data = [];
+        $data['top'] = Page::where('name', Page::BILLING)
+            ->where('place', Page::PLACE_TOP)
+            ->first()
+            ->toArray();
+        $data['middle'] = Page::where('name', Page::BILLING)
+            ->where('place', Page::PLACE_MIDDLE)
+            ->first()
+            ->toArray();
+        $data['middle_1'] = Page::where('name', Page::BILLING)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_1)
+            ->first()
+            ->toArray();
+        $data['middle_2'] = Page::where('name', Page::BILLING)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_2)
+            ->first()
+            ->toArray();
+        $data['middle_3'] = Page::where('name', Page::BILLING)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_3)
+            ->first()
+            ->toArray();
+        $data['bottom'] = Page::where('name', Page::BILLING)
+            ->where('place', Page::PLACE_BOTTOM)
+            ->first()
+            ->toArray();
+
+        return view('home.billing', compact('data'));
     }
 
     public function coding()
     {
-        return view('home.coding');
+        $data = [];
+        $data['top'] = Page::where('name', Page::CODING)
+            ->where('place', Page::PLACE_TOP)
+            ->first()
+            ->toArray();
+        $data['middle'] = Page::where('name', Page::CODING)
+            ->where('place', Page::PLACE_MIDDLE)
+            ->first()
+            ->toArray();
+        $data['middle_1'] = Page::where('name', Page::CODING)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_1)
+            ->first()
+            ->toArray();
+        $data['middle_2'] = Page::where('name', Page::CODING)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_2)
+            ->first()
+            ->toArray();
+        $data['middle_3'] = Page::where('name', Page::CODING)
+            ->where('place', Page::PLACE_MIDDLE_SECTION_3)
+            ->first()
+            ->toArray();
+        $data['bottom'] = Page::where('name', Page::CODING)
+            ->where('place', Page::PLACE_BOTTOM)
+            ->first()
+            ->toArray();
+
+        return view('home.coding', compact('data'));
     }
 
     public function contact()

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Setting;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;

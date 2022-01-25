@@ -27,7 +27,7 @@
 <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin') }}">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('settings') }}">
             <div class="sidebar-brand-icon">
                 <img src="{{ BaseHelper::logo() }}">
             </div>
@@ -60,10 +60,6 @@
                     @foreach($pages as $page)
                         <a class="collapse-item" href="{{ route('pages.' . $page->name) }}">{{ ucwords($page->name) }}</a>
                     @endforeach
-                    {{--<a class="collapse-item" href="{{ route('pages.about') }}">About</a>--}}
-                    {{--<a class="collapse-item" href="{{ route('pages.billing') }}">Billing</a>--}}
-                    {{--<a class="collapse-item" href="{{ route('pages.contact') }}">Contact</a>--}}
-                    {{--<a class="collapse-item" href="{{ route('pages.support') }}">Support</a>--}}
                 </div>
             </div>
         </li>
