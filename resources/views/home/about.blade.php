@@ -16,12 +16,13 @@
                         <p>{{ $person->position }}</p>
                         <!-- <a href= "#">view bio</a> -->
                     </section>
-
-                    <section class="social_network_links">
-                        <a target="_blank" href="{{ $person->social_link }}">
-                            <img src="{{ \App\Helpers\BaseHelper::getSocialIcon($person) }}" alt= "lmns">
-                        </a>
-                    </section>
+                    @if($person->social_link)
+                        <section class="social_network_links">
+                            <a target="_blank" href="{{ $person->social_link }}">
+                                <img src="{{ \App\Helpers\BaseHelper::getSocialIcon($person) }}" alt= "lmns">
+                            </a>
+                        </section>
+                    @endif
                 </div>
         @endforeach
         </section>
