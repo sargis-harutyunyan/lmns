@@ -68,7 +68,6 @@ Route::group(['prefix' => 'a_d_min', 'middleware' => ['auth']], function () {
         Route::post('/billing-middle-1', [BillingPageController::class, 'middleS1'])->name('.billing.middle-1');
         Route::post('/billing-middle-2', [BillingPageController::class, 'middleS2'])->name('.billing.middle-2');
         Route::post('/billing-middle-3', [BillingPageController::class, 'middleS3'])->name('.billing.middle-3');
-        Route::post('/billing-bottom', [BillingPageController::class, 'bottom'])->name('.billing.bottom');
 
         Route::get('/coding', [CodingPageController::class, 'index'])->name('.coding');
 
@@ -77,7 +76,6 @@ Route::group(['prefix' => 'a_d_min', 'middleware' => ['auth']], function () {
         Route::post('/coding-middle-1', [CodingPageController::class, 'middleS1'])->name('.coding.middle-1');
         Route::post('/coding-middle-2', [CodingPageController::class, 'middleS2'])->name('.coding.middle-2');
         Route::post('/coding-middle-3', [CodingPageController::class, 'middleS3'])->name('.coding.middle-3');
-        Route::post('/coding-bottom', [CodingPageController::class, 'bottom'])->name('.coding.bottom');
 
         Route::get('/about', [AboutPageController::class, 'about'])->name('.about');
 

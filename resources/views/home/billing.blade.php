@@ -27,26 +27,4 @@
         </section>
     </div>
 
-    <div class="login_section">
-        <section class="login_text">
-            {!! $data['bottom']['content'] !!}
-        </section>
-        <section class="login_form">
-            <div>
-                <form class="register-form" action="">
-                    <input type="text" id="" name="" placeholder="Name*">
-                    <br><br>
-                    <input type="email" id="" name="" placeholder="Email*">
-                    <br><br>
-                    <p>Select Agency Type</p>
-                    <br>
-                    <input type="checkbox" id="" name="" value="Home Care">
-                    <label for="">Home Care</label>
-                    <input type="checkbox" id="" name="" value="Hospice">
-                    <label for="">Hospice</label> <br><br>
-                    <button class="schedule">Schedule</button>
-                </form>
-            </div>
-        </section>
-    </div>
 @endsection

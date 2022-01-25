@@ -100,25 +100,6 @@
                         <button type="button" class="btn btn-sm btn-primary">Cancel</button>
                     </div>
                 </form>
-
-                <form method="POST" action="{{ route('pages.billing.bottom') }}">
-                    @csrf
-                    <div style="margin-top: 25px" class="col-md-12">
-                        <h3>Bottom</h3>
-                        <div class="row">
-
-                        <textarea name="vision" class="form-control" id="bottom">
-                            {{ $data['bottom']['content'] }}
-                        </textarea>
-
-                        </div>
-                    </div>
-                    <div style="margin-top: 15px">
-                        <button class="btn btn-sm btn-success">Save</button>
-                        <button type="button" class="btn btn-sm btn-primary">Cancel</button>
-                    </div>
-                </form>
-
             </div>
         </div>
 
