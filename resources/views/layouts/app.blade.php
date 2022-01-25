@@ -66,15 +66,15 @@
                 </ul>
             </section>
             <section class="footer_nav_menu">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li>
-                        <a href="{{ route('about') }}">About LMNS</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('support') }}">Client Support</a>
-                    </li>
-                </ul>
+                {{--<h3>Useful Links</h3>--}}
+                {{--<ul>--}}
+                    {{--<li>--}}
+                        {{--<a href="{{ route('about') }}">About LMNS</a>--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="{{ route('support') }}">Client Support</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
             </section>
             <section class="footer_form">
                 <form action="">
