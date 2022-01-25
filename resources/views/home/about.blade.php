@@ -18,9 +18,8 @@
                     </section>
 
                     <section class="social_network_links">
-                        <a href="{{ $person->social_link }}">
-                            <!-- {{ $person->social_link }} -->
-                            <img  src="" alt= "fbicon">
+                        <a target="_blank" href="{{ $person->social_link }}">
+                            <img src="{{ \App\Helpers\BaseHelper::getSocialIcon($person) }}" alt= "lmns">
                         </a>
                     </section>
                 </div>

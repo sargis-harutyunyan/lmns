@@ -4,7 +4,7 @@
     <div class="section_1">
         <h1>Lorem ipsum dolor sit amet.</h1>
         <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, blanditiis.</h3>
-        <button>Get Support Today</button>
+        <button>{{ route('contact') }}</button>
     </div>
     <div class="section_2">
         <section>

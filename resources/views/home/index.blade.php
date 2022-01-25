@@ -3,6 +3,9 @@
 @section('content')
      <div class="section_1">
         {!! $data['top']['content'] !!}
+         <button>
+             <a class="support-btn" href="{{ route('contact') }}">Get Support Today</a>
+         </button>
     </div>
 
     <div class="section_2">

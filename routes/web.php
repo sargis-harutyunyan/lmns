@@ -25,6 +25,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/billing', [HomeController::class, 'billing'])->name('billing');
 Route::get('/coding', [HomeController::class, 'coding'])->name('coding');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact', [HomeController::class, 'contactInfo'])->name('contact-form');
 Route::get('/support', [HomeController::class, 'support'])->name('support');
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])

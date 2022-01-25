@@ -731,3 +731,11 @@ footer .footer_form form .input_and_button .subscribe_button_div .subscribe_butt
     padding: 160px  0  0 20px;
   }
 }
+
+.support-btn {
+  text-decoration: none;
+  color: white;
+}
+.social_network_links img {
+  height: 38px;
+}

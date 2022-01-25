@@ -18,7 +18,7 @@
                 </a>
             </section>
             <section class="form_and_tell">
-                <a href="tel:{{ $settings->phone }}">Phone number</a>
+                <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
             </section>
         </header>
 

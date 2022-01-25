@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactUs;
 use App\Models\Page;
 use App\Models\Team;
-use PHPUnit\TextUI\XmlConfiguration\Logging\TeamCity;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -61,6 +64,26 @@ class HomeController extends Controller
     public function contact()
     {
         return view('home.contact');
+    }
+
+    public function contactInfo(Request $request)
+    {
+        $validation = Validator::make($request->all(), [
+            "firstName" => "required",
+            "lastName" => "required",
+            "phone" => "required",
+            "email" => "required|email",
+            "message" => "required",
+        ]);
+
+        if($validation->passes()) {
+            Mail::to('p.mihran@gmail.com')
+                ->send(new ContactUs());
+
+            return redirect()->back()->with(['success' => 'Your message successfully sent.']);
+        } else {
+            return redirect()->back()->with(['error' => 'Something went wrong. Please try a bit later.']);
+        }
     }
 
     public function support()
