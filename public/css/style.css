@@ -90,7 +90,7 @@ header .menu .hide-menu img {
 .menu_list ul {
   height: 100%;
   display: flex;
-  gap: 85px;
+  gap: 100px;
   justify-content: center;
   align-items: center; 
 }
@@ -124,11 +124,12 @@ header .menu .hide-menu img {
 }
 .section_1 h1, .section_1 p, .section_1 button {
   margin-top: 20px;
-  cursor: pointer
+  
 }
 .section_1 p {
   width: 850px;
-  font-size: 18px;
+  font-size: 20px;
+  /* font-style: inherit; */
 }
 .section_1 button {
   padding: 10px 60px 10px 60px;
@@ -138,6 +139,7 @@ header .menu .hide-menu img {
   font-weight: 200;
   font-size: 25px;
   border: 2px solid #D62020; 
+  cursor: pointer
 }
 .section_1 button:hover {
   background-color: rgba(255, 255, 255, 0);
@@ -269,13 +271,14 @@ footer .contact_information p {
 }
 footer .contact_information ul li {
   list-style: none;
-  border-bottom: 1px solid grey;
+  
   margin-top: 20px;
   padding-bottom: 20px; 
 }
 footer .contact_information ul .email {
   background: url(../images/email-icon.svg) -2px -6px no-repeat;
   background-size: 35px; 
+  border-bottom: 1px solid grey;
 }
 footer .contact_information ul .email a {
   margin-left: 38px; 
@@ -287,13 +290,13 @@ footer .contact_information ul .telephone {
 footer .contact_information ul .telephone a {
   margin-left: 38px; 
 }
-footer .contact_information ul .address {
+/* footer .contact_information ul .address {
   background: url(../images/location-icon.svg) -6px -9px no-repeat;
   background-size: 40px; 
-}
-footer .contact_information ul .address a {
+} */
+/* footer .contact_information ul .address a {
   margin-left: 38px;
-}
+} */
 footer .footer_nav_menu {
   width: 200px;
   height: 69%;
@@ -370,27 +373,7 @@ footer .footer_form .pages_links a {
 
 
 
-/* about section */
-/* .about_founder {
 
-width: 100%;
-background-image: url("../images/founder.png");
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-color: #FFFDD0; 
-} */
-/* .about_founder .about_founder_text {
-margin-left: 100px;
-width: 40%;
-letter-spacing: 1px;
-font-size: 17px;
-line-height: 20px; }
-.about_founder .about_founder_text p {
-margin-top: 20px; } */
 
 .leadership_team {
   background-color: #8A0000;
@@ -471,11 +454,15 @@ color: #FFFDD0;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 150px 0 0 150px;
+  /* padding: 150px 0 0 150px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
 .contactUs_img h1 {
-  color: #8A0000 
+  color: #8A0000;
+  
 }
 
 
@@ -530,26 +517,7 @@ color: #FFFDD0;
   resize: none;
 }
 
-/* .information_and_location_section {
-  height: 300px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-.information_and_location_section .information_and_socialNetwork .information {
-  margin-bottom: 30px;
-  line-height: 30px; }
-.information_and_location_section .information_and_socialNetwork .information ul li {
-  list-style: none;
-  border-bottom: 1px solid grey;
-  padding: 10px 0; }
-.information_and_location_section .information_and_socialNetwork .information ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px; }
-.information_and_location_section .information_and_socialNetwork .socialNetwork_links a {
-  text-decoration: none;
-  margin-right: 10px; } */
+
 
 /*# sourceMappingURL=contactUs.css.map */
 
@@ -639,6 +607,8 @@ color: #FFFDD0;
 
 .contactUs_img {
   padding: 150px 0 0 5px;
+  font-size: 18px;
+  text-align: center;
 }
 .contactUs_form {
   padding: 10px;
@@ -674,6 +644,10 @@ footer .footer_form form .input_and_button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+footer .footer_form .pages_links {
+  text-align: center;
 }
 footer .footer_form form .input_and_button .subscribe_email_div #email {
   width: 250px;
