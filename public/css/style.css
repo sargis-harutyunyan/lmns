@@ -12,7 +12,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 280px;
+  gap: 600px;
   background-color: #8A0000; 
   position: sticky;
   top: 0;
@@ -21,23 +21,14 @@ header {
 header .logo a img {
   width: 250px; 
 }
-header .form_and_tell {
-  margin-right: 5%;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  gap:20px
-}
+
 
 header .form_and_tell a {
   text-decoration: none;
   color: #FFFDD0;
   font-weight: 200;
   font-size: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; 
+ 
 }
 
 
@@ -454,7 +445,6 @@ color: #FFFDD0;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  /* padding: 150px 0 0 150px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,7 +459,7 @@ color: #FFFDD0;
 
 
 .contactUs_form {
-  padding: 100px 0;
+  padding: 150px 0;
   background-color: #8A0000;
   width: 100%; 
   border-bottom: 1px solid grey;
@@ -611,7 +601,7 @@ color: #FFFDD0;
   text-align: center;
 }
 .contactUs_form {
-  padding: 10px;
+  padding: 80px 10px;
 }
 .contactUs_form form section input {
   width: 270px;
@@ -712,4 +702,26 @@ footer .footer_form form .input_and_button .subscribe_button_div .subscribe_butt
 }
 .social_network_links img {
   height: 38px;
+}
+
+
+
+.alert {
+  border-radius: 20px;
+  width: 300px;
+  position: absolute;
+  top: 666px;
+  right: 20px;
+  color: #FFFDD0;
+  background-color: #D62020;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.alert .close {
+  border: none;
+  font-size: 18px;
+  color: #FFFDD0;
+  background: transparent;
+  cursor: pointer;
 }
