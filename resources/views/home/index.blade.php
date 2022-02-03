@@ -2,7 +2,10 @@
 
 @section('content')
      <div class="section_1">
-        {!! $data['top']['content'] !!}
+         <div class = "section1_heading">
+            {!! $data['top']['content'] !!}
+         </div>
+        
          <button>
              <a class="support-btn" href="{{ route('contact') }}">Get Support Today</a>
          </button>
