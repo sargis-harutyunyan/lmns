@@ -129,7 +129,7 @@ class HomeController extends Controller
         ]);
 
         if($validation->passes()) {
-            Mail::to('p.mihran@gmail.com')
+            Mail::to(config('mail.send_to'))
                 ->send(new ContactUs());
 
             return redirect()->back()->with(['success' => 'Your message successfully sent.']);
