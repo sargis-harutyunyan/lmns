@@ -12,7 +12,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 280px;
+  gap: 600px;
   background-color: #8A0000; 
   position: sticky;
   top: 0;
@@ -21,23 +21,14 @@ header {
 header .logo a img {
   width: 250px; 
 }
-header .form_and_tell {
-  margin-right: 5%;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  gap:20px
-}
+
 
 header .form_and_tell a {
   text-decoration: none;
   color: #FFFDD0;
   font-weight: 200;
   font-size: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; 
+ 
 }
 
 
@@ -90,7 +81,7 @@ header .menu .hide-menu img {
 .menu_list ul {
   height: 100%;
   display: flex;
-  gap: 85px;
+  gap: 100px;
   justify-content: center;
   align-items: center; 
 }
@@ -122,14 +113,13 @@ header .menu .hide-menu img {
   background-size: cover;
   color: #FFFDD0;
 }
-.section_1 h1, .section_1 p, .section_1 button {
-  margin-top: 20px;
-  cursor: pointer
-}
-.section_1 p {
+
+
+.section_1 .section1_heading * {
   width: 850px;
-  font-size: 18px;
+  margin: 20px 0;
 }
+
 .section_1 button {
   padding: 10px 60px 10px 60px;
   background-color: #D62020;
@@ -138,6 +128,7 @@ header .menu .hide-menu img {
   font-weight: 200;
   font-size: 25px;
   border: 2px solid #D62020; 
+  cursor: pointer
 }
 .section_1 button:hover {
   background-color: rgba(255, 255, 255, 0);
@@ -269,13 +260,14 @@ footer .contact_information p {
 }
 footer .contact_information ul li {
   list-style: none;
-  border-bottom: 1px solid grey;
+  
   margin-top: 20px;
   padding-bottom: 20px; 
 }
 footer .contact_information ul .email {
   background: url(../images/email-icon.svg) -2px -6px no-repeat;
   background-size: 35px; 
+  border-bottom: 1px solid grey;
 }
 footer .contact_information ul .email a {
   margin-left: 38px; 
@@ -287,13 +279,13 @@ footer .contact_information ul .telephone {
 footer .contact_information ul .telephone a {
   margin-left: 38px; 
 }
-footer .contact_information ul .address {
+/* footer .contact_information ul .address {
   background: url(../images/location-icon.svg) -6px -9px no-repeat;
   background-size: 40px; 
-}
-footer .contact_information ul .address a {
+} */
+/* footer .contact_information ul .address a {
   margin-left: 38px;
-}
+} */
 footer .footer_nav_menu {
   width: 200px;
   height: 69%;
@@ -370,27 +362,7 @@ footer .footer_form .pages_links a {
 
 
 
-/* about section */
-/* .about_founder {
 
-width: 100%;
-background-image: url("../images/founder.png");
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-color: #FFFDD0; 
-} */
-/* .about_founder .about_founder_text {
-margin-left: 100px;
-width: 40%;
-letter-spacing: 1px;
-font-size: 17px;
-line-height: 20px; }
-.about_founder .about_founder_text p {
-margin-top: 20px; } */
 
 .leadership_team {
   background-color: #8A0000;
@@ -469,20 +441,23 @@ color: #FFFDD0;
 .contactUs_img {
   height: 400px;
   width: 100%;
+  background-image: url(../images/Contact-us.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 150px 0 0 150px;
+  display: flex; 
+  /* align-items: center; */
+   justify-content: center;
   
 }
-.contactUs_img h1 {
-  color: #8A0000 
+.contactUs_img * {
+  padding-top: 30px;
+  color: #8A0000;
+  font-size: 23px;
+  
 }
 
-
-
-
 .contactUs_form {
-  padding: 100px 0;
+  padding: 150px 0 60px 0;
   background-color: #8A0000;
   width: 100%; 
   border-bottom: 1px solid grey;
@@ -530,26 +505,7 @@ color: #FFFDD0;
   resize: none;
 }
 
-/* .information_and_location_section {
-  height: 300px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-.information_and_location_section .information_and_socialNetwork .information {
-  margin-bottom: 30px;
-  line-height: 30px; }
-.information_and_location_section .information_and_socialNetwork .information ul li {
-  list-style: none;
-  border-bottom: 1px solid grey;
-  padding: 10px 0; }
-.information_and_location_section .information_and_socialNetwork .information ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px; }
-.information_and_location_section .information_and_socialNetwork .socialNetwork_links a {
-  text-decoration: none;
-  margin-right: 10px; } */
+
 
 /*# sourceMappingURL=contactUs.css.map */
 
@@ -587,11 +543,14 @@ color: #FFFDD0;
   header {
     gap: 10px
   }
-  .section_1 h1 {
+  .section_1 {
+    padding: 0 20px;
+  }
+  .section_1 .section1_heading * {
     width: 100%;
   }
-  .section_1 p {
-    width: 100%;
+  .section_1 button {
+    font-size: 18px;
   }
   .section_2 {
     padding: 50px 10px;
@@ -635,13 +594,18 @@ color: #FFFDD0;
 
 
 
-
-
 .contactUs_img {
-  padding: 150px 0 0 5px;
+  padding: 20px;
+  font-size: 23px;
+  text-align: center;
+  position: relative;
+}
+.contactUs_img * {
+  position: absolute;
+  top: 10px;
 }
 .contactUs_form {
-  padding: 10px;
+  padding: 80px 10px;
 }
 .contactUs_form form section input {
   width: 270px;
@@ -675,6 +639,10 @@ footer .footer_form form .input_and_button {
   flex-direction: column;
   justify-content: center;
 }
+
+footer .footer_form .pages_links {
+  text-align: center;
+}
 footer .footer_form form .input_and_button .subscribe_email_div #email {
   width: 250px;
 }
@@ -702,7 +670,10 @@ footer .footer_form form .input_and_button .subscribe_button_div .subscribe_butt
   .menu_list ul {
     gap: 25px;
   }
-  .section_1 p {
+  .section_1 {
+    padding: 0 20px;
+  }
+  .section_1 .section1_heading * {
     width: 100%;
   }
   .menu_list ul a {
@@ -728,7 +699,14 @@ footer .footer_form form .input_and_button .subscribe_button_div .subscribe_butt
     gap: 20px
   }
   .contactUs_img {
-    padding: 160px  0  0 20px;
+    background-position: right;
+    font-size: 20px;
+    position: relative;
+  }
+  .contactUs_img * {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
   }
 }
 
@@ -738,4 +716,26 @@ footer .footer_form form .input_and_button .subscribe_button_div .subscribe_butt
 }
 .social_network_links img {
   height: 38px;
+}
+
+
+
+.alert {
+  border-radius: 20px;
+  width: 300px;
+  position: absolute;
+  top: 666px;
+  right: 20px;
+  color: #FFFDD0;
+  background-color: #D62020;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.alert .close {
+  border: none;
+  font-size: 18px;
+  color: #FFFDD0;
+  background: transparent;
+  cursor: pointer;
 }

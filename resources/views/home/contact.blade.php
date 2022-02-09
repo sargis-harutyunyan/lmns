@@ -3,8 +3,11 @@
 @section('content')
     @include('home.flash-message')
     <div class= "contactUs_img">
-        <h1>Lorem ipsum dolor sit.</h1>
-    </div>
+        <p>
+            We'd Love to Hear From You.<br>
+            Contact LMNS to get the info you're looking for right now.
+        </p>
+</div>
 
     <div class= "contactUs_form">
         <form action="{{ route('contact-form') }}" method="post">
